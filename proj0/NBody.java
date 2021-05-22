@@ -25,19 +25,19 @@ public class NBody {
 		return planets;
 	}
 
-	public static void drawBackground(double radius) {
+	private static void drawBackground(double radius) {
 		String imageToDraw = "images/starfield.jpg";
 		StdDraw.setScale(radius * -1, radius);
 		StdDraw.picture(0, 0, imageToDraw);
 	}
 
-	public static void drawPlanets(Planet[] planets) {
+	private static void drawPlanets(Planet[] planets) {
 		for(Planet p : planets) {
 			p.draw();
 		}
 	}
 
-	public static void draw(double T, double dt, String filename) {
+	private static void draw(double T, double dt, String filename) {
 		double radius = readRadius(filename);
 		Planet[] planets = readPlanets(filename);
 		int waitTimeMilliseconds = 1;
