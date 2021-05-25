@@ -177,7 +177,7 @@ public class ArrayDeque<T> {
             shortenArray();
         }
 
-        return null;
+        return removedValue;
     }
 
     public T get(int index) {
