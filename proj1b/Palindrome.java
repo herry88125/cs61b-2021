@@ -41,7 +41,7 @@ public class Palindrome {
 
         int needCheck = a.size() / 2;
 
-        return isPalindrome(a, new OffByOne(), needCheck, 1);
+        return isPalindrome(a, cc, needCheck, 1);
     }
 
     private boolean isPalindrome(Deque<Character> a, CharacterComparator cc, int needCheck, int nowCheck) {

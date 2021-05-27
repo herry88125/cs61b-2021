@@ -49,4 +49,15 @@ public class TestPalindrome {
         s = "aaaab";
         assertFalse(palindrome.isPalindrome(s, offByOne));
     }
+
+    @Test
+    public void testIsPalindromeOffByN() {
+        String s;
+
+        s = "binding";
+        assertTrue(palindrome.isPalindrome(s, new OffByN(5)));
+
+        s = "bindiii";
+        assertFalse(palindrome.isPalindrome(s, new OffByN(5)));
+    }
 }
