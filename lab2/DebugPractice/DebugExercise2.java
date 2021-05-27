@@ -71,9 +71,16 @@ public class DebugExercise2 {
      *  the result should be 57.
      * */
     public static int sumOfElementwiseMaxes(int[] a, int[] b) {
-        int[] maxes = arrayMax(a, b);
-        int sumofMaxes = arraySum(maxes);
-        return sumofMaxes;
+        int sum = 0;
+
+        for(int i = 0; i < a.length; i++) {
+            if(a[i] > b[i]) {
+               sum += a[i];
+            } else {
+              sum += b[i];
+            }
+        }
+        return sum;
     }
 
 
